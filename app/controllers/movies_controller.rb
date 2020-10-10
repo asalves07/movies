@@ -32,8 +32,8 @@ class MoviesController < ApplicationController
 
   def movie_params
     params.require(:movie).permit(:adult, :backdrop_path, :homepage, :imdb, 
-                                  :original_language, :original_title, :overview
-                                  :popularity, :poster_path, :runtime, :status 
+                                  :original_language, :original_title, :overview,
+                                  :popularity, :poster_path, :runtime, :status, 
                                   :title, :vote_average, :vote_count)
   end
 end
