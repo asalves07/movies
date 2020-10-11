@@ -1,2 +1,6 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Filmes mais populares</h1>
+
+<% @popular['results'].each do |movie| %>
+  <%= movie['title'] %> <br>
+  <%= movie['overview'] %> <br><br>
+<% end %>
