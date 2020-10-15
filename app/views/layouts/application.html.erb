@@ -46,7 +46,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <%= form_with(url: welcome_index_path, local:true, method: :get) do |form| %>
+            <%= form_with(url: welcome_search_path, local:true, method: :get) do |form| %>
               <div class="input-group">
                 <%= form.text_field :term, class:"form-control border-0 bg-light", placeholder:"Buscar por um filme, Série ou Pessoa..." %>
               </div>

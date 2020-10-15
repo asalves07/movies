@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :movies, except: [:show, :new]
 
   get 'welcome/index'
+  get 'welcome/search'
   root to: 'welcome#index'
 
   get 'user/edit'

@@ -1,7 +1,15 @@
 class WelcomeController < ApplicationController
 
   def index
-    params[:term].blank? ? @movies = JSON.parse(themovies_service.popular.body) : @movies = JSON.parse(themovies_service.search.body)
+    @movies = JSON.parse(themovies_service.popular.body)
+  end
+
+  def search
+    unless params[:term].blank?
+      @movies = JSON.parse(themovies_service.search.body)
+    else
+      render :index
+    end 
   end
 
 
