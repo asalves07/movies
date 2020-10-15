@@ -9,6 +9,15 @@ class MoviesController < ApplicationController
   def edit
   end
 
+  def create
+    @movie = Movie.new movie_params
+    if @subject.save
+      redirect_to root_path, notice: 'Movie was successfully created.'
+    else
+      ####
+    end
+  end
+
   def update
     if @movie.update(movie_params)
       redirect_to movies_path, notice: 'Movie was successfully updated.'

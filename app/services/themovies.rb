@@ -2,8 +2,8 @@ class Themovies
   include HTTParty
   base_uri 'https://api.themoviedb.org/3'
 
-  def initialize()
-    @options = {query: {api_key: ENV["api_key"], language: "pt-BR", page: 1 }}
+  def initialize(query)
+    @options = {query: {api_key: ENV["api_key"], language: "pt-BR", query: query, page: 1 }}
   end
 
   def popular

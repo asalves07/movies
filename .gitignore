@@ -57,6 +57,7 @@ node_modules/
 
 # Ignore precompiled javascript packs
 /public/packs
+/public/templates
 /public/packs-test
 /public/assets
 

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :movies, except: [:show, :new, :create]
+  resources :movies, except: [:show, :new]
 
   get 'welcome/index'
   root to: 'welcome#index'

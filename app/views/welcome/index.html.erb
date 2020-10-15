@@ -1,6 +1,50 @@
-<h1>Filmes mais populares</h1>
 
-<% @popular['results'].each do |movie| %>
-  <%= movie['title'] %> <br>
-  <%= movie['overview'] %> <br><br>
-<% end %>
+
+
+<div class="row">
+  <div class="col-sm-3">
+    <h2>About Me</h2>
+    <h5>Photo of me:</h5>
+    <div class="fakeimg">Fake Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <h3>Some Links</h3>
+      <p>Lorem ipsum dolor sit ame.</p>
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <hr class="d-sm-none">
+    </div>
+
+    <div class="col-sm-9">
+      <h1>Filmes mais populares</h1>
+      <% @movies['results'].each do |movie| %>
+        <div class="card shadow mt-4" >
+          <div class="row">
+            <div class="col-md-4">
+              <%= image_tag("https://image.tmdb.org/t/p/w200/#{movie['poster_path']}", class:"img-fluid rounded-left" ) %>
+            </div>
+            <div class="col-md-8">
+            <h2 class="card-title mt-3"><%= movie['title'] %></h2>
+            <span><%= movie['release_date'] %></span>
+            <p><%= movie['overview'] %> </p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>
+
+
