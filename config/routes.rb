@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
   get 'welcome/search'
+  get 'welcome/show'
   root to: 'welcome#index'
 
   get 'user/edit'

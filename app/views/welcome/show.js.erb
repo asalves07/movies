@@ -1,0 +1,11 @@
+$modal = $('.modal'),
+  $modalBody = $('.modal .modal-body'),
+  $modalFilters = $('.modal .modal-filters'),
+  $modalHeading = $('.modal .modal-heading');
+  $modalHeading.html("<%= @options&.[](:page_title) || title %>");
+  $modal.addClass("is-active");
+
+  $(".modal-close").click(function(event) {
+    $(".modal").removeClass("is-active");
+    event.preventDefault();
+  })

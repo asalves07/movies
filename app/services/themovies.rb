@@ -14,4 +14,16 @@ class Themovies
     self.class.get('/search/multi', @options) 
   end
 
+  def movies
+    self.class.get('/search/movie', @options) 
+  end
+
+  def tv
+    self.class.get('/search/tv', @options) 
+  end
+
+  def people
+    self.class.get('/search/person', @options) 
+  end
+
 end
